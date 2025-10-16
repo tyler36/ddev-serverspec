@@ -7,7 +7,9 @@
 
 ## Overview
 
-This add-on integrates Serverspec into your [DDEV](https://ddev.com/) project.
+This add-on integrates [Serverspec](https://serverspec.org/) into your [DDEV](https://ddev.com/) project.
+
+This add-on installs the required serverspec packages inside the web container.
 
 ## Installation
 
@@ -22,26 +24,8 @@ After installation, make sure to commit the `.ddev` directory to version control
 
 | Command | Description |
 | ------- | ----------- |
-| `ddev describe` | View service status and used ports for Serverspec |
-| `ddev logs -s serverspec` | Check Serverspec logs |
-
-## Advanced Customization
-
-To change the Docker image:
-
-```bash
-ddev dotenv set .ddev/.env.serverspec --serverspec-docker-image="ddev/ddev-utilities:latest"
-ddev add-on get tyler36/ddev-serverspec
-ddev restart
-```
-
-Make sure to commit the `.ddev/.env.serverspec` file to version control.
-
-All customization options (use with caution):
-
-| Variable | Flag | Default |
-| -------- | ---- | ------- |
-| `SERVERSPEC_DOCKER_IMAGE` | `--serverspec-docker-image` | `ddev/ddev-utilities:latest` |
+| `ddev serverspec-init` | Scaffold tests |
+| `ddev serverspec` | Run serverspec tests |
 
 ## Credits
 

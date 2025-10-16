@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#ddev-generated
+## Description: Scaffold Serverspec tests via wizard
+## Usage: serverspec-init [flags] [args]
+## Example: "ddev serverspec-init --version"
+## ExecRaw: true
+
+serverspec-init "$@"

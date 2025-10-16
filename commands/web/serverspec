@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#ddev-generated
+## Description: Run Serverspec tests using rake
+## Usage: serverspec [flags] [args]
+## Example: "ddev serverspec"
+## ExecRaw: false
+
+rake spec "$@"
