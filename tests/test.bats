@@ -32,6 +32,10 @@ setup() {
   export DDEV_NO_INSTRUMENTATION=true
   ddev delete -Oy "${PROJNAME}" >/dev/null 2>&1 || true
   cd "${TESTDIR}"
+
+  # Force Ruby to view the environment as Linux. Required to correctly generate tests with `ddev serverspec-init`
+  export RUBY_PLATFORM="x86_64-linux"
+
   run ddev config --project-name="${PROJNAME}" --project-tld=ddev.site
   assert_success
   run ddev start -y
