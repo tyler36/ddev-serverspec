@@ -48,6 +48,14 @@ health_checks() {
   assert_output --partial "1 example, 0 failures"
 }
 
+generate_test_files () {
+  ddev serverspec-init <<EOF
+1
+2
+/etc/serverspec
+EOF
+}
+
 teardown() {
   set -eu -o pipefail
   ddev delete -Oy "${PROJNAME}" >/dev/null 2>&1
@@ -69,11 +77,7 @@ teardown() {
   assert_success
 
   # Add example testsuite
-  run ddev serverspec-init <<EOF
-1
-2
-/etc/serverspec
-EOF
+  run generate_test_files
   assert_success
 
   health_checks
@@ -90,11 +94,7 @@ EOF
   assert_success
 
   # Add example testsuite
-  run ddev serverspec-init <<EOF
-1
-2
-/etc/serverspec
-EOF
+  run generate_test_files
   assert_success
 
   health_checks
