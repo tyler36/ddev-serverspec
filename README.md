@@ -27,6 +27,18 @@ After installation, make sure to commit the `.ddev` directory to version control
 | `ddev serverspec-init` | Scaffold tests |
 | `ddev serverspec` | Run serverspec tests |
 
+### serverspec
+
+`ddev serverspec` runs available serverspec tests.
+
+The command accepts flags and arguments, as required.
+
+For example: to stop at the first failing test.
+
+```shell
+ddev rspec --fail-fast
+```
+
 ## Credits
 
 **Contributed and maintained by [@tyler36](https://github.com/tyler36)**

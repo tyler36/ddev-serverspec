@@ -43,7 +43,7 @@ setup() {
 }
 
 health_checks() {
-  run ddev serverspec
+  run ddev rspec
   assert_success
   assert_output --partial "1 example, 0 failures"
 }
