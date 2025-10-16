@@ -69,7 +69,11 @@ teardown() {
   assert_success
 
   # Add example testsuite
-  run echo -e "1\n2\n/etc/serverspec\n" | ddev serverspec-init
+  run ddev serverspec-init <<EOF
+1
+2
+/etc/serverspec
+EOF
   assert_success
 
   health_checks
@@ -86,7 +90,11 @@ teardown() {
   assert_success
 
   # Add example testsuite
-  run echo -e "1\n2\n/etc/serverspec\n" | ddev serverspec-init
+  run ddev serverspec-init <<EOF
+1
+2
+/etc/serverspec
+EOF
   assert_success
 
   health_checks
