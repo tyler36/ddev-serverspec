@@ -65,7 +65,7 @@ teardown() {
   assert_success
 
   # Add example testsuite
-  run cp "${DIR}/tests/testdata/." "${TESTDIR}/." -r
+  run echo -e "1\n2\n/etc/serverspec\n" | ddev serverspec-init
   assert_success
 
   health_checks
@@ -82,7 +82,7 @@ teardown() {
   assert_success
 
   # Add example testsuite
-  run cp "${DIR}/tests/testdata/." "${TESTDIR}/." -r
+  run echo -e "1\n2\n/etc/serverspec\n" | ddev serverspec-init
   assert_success
 
   health_checks
