@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#ddev-generated
+## Description: Run Serverspec tests using rspec
+## Usage: rspec [flags] [args]
+## Example: "ddev rspec"
+## Example: "ddev rspec --fail-fast"
+## ExecRaw: false
+
+rspec "$@"

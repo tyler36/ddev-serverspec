@@ -2,7 +2,7 @@ name: serverspec
 
 project_files:
   - web-build/Dockerfile
-  - commands/web/serverspec
+  - commands/web/rspec
   - commands/web/serverspec-init
 
 ddev_version_constraint: '>= v1.24.3'
