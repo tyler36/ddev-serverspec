@@ -22,12 +22,38 @@ After installation, make sure to commit the `.ddev` directory to version control
 
 ## Usage
 
-| Command | Description |
-| ------- | ----------- |
-| `ddev serverspec-init` | Scaffold tests |
-| `ddev serverspec` | Run serverspec tests |
+| Command                | Description          |
+| ---------------------- | -------------------- |
+| `ddev serverspec-init` | Scaffold tests       |
+| `ddev serverspec`      | Run serverspec tests |
 
-### serverspec
+### command: serverspec-init
+
+`ddev serverspec-init` starts a wizard to generate required files and scaffold an example test.
+
+The following is an example that generates that confirms a service is listening on port 80.
+
+```shell
+$ ddev serverspec-init
+Select OS type:
+  1) UN*X
+  2) Windows
+Select number: 1
+
+Select a backend type:
+  1) SSH
+  2) Exec (local)
+
+Select number: 2
+ + spec/
+ + spec/localhost/
+ + spec/localhost/sample_spec.rb
+ + spec/spec_helper.rb
+ + Rakefile
+ + .rspec
+```
+
+### command: serverspec
 
 `ddev serverspec` runs available serverspec tests.
 
